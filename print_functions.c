@@ -14,8 +14,6 @@ int _putchar(int c)
 	return (write(1, a, 1));
 }
 
-
-
 /**
   * print_num - Prints number to std output
   * @args: List of arguments
@@ -26,7 +24,12 @@ int _putchar(int c)
 
 int print_num(va_list args, int len)
 {
-	int n  = va_arg(args, int);
+	int n;
+
+	n = va_arg(args, int);
+
+	if (!n)
+		return (len);
 
 	len = putchar_int(n, len);
 	return (len);
