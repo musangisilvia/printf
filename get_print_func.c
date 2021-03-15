@@ -5,6 +5,7 @@
   * @c: The specifier or current character
   * @b: The previous character
   * @args: List of arguments
+  * @len: The current lenght of the string.
   *
   * Return: Pointer to correct print function
   */
