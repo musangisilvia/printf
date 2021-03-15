@@ -31,6 +31,6 @@ int print_positive(va_list args, int len)
 
 	n = va_arg(args, int);
 	if (n < 0)
-		return (len);
+		n = -n;
 	return (print_binary(n, len));
 }
