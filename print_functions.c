@@ -64,30 +64,25 @@ int print_str(va_list args, int len)
   */
 int putchar_int(int n, int len)
 {
-	int count, num;
+	int divisor, num;
 
-	num = n;
-
-	count = 0;
-
+	divisor = 1;
 	if (n < 0)
 	{
-		count += _putchar(45);
-		n = -n;
-
+		len += _putchar(45);
+		num = -n;
 	}
+	else
+		num = n;
+	for (; num / divisor > 9; )
+		divisor *= 10;
 
-	/*test to count digits*/
-	while (num != 0)
+	for (; divisor != 0; )
 	{
-		num /= 10;
-		++count;
+		len += _putchar((num / divisor) + '0');
+		num %= divisor;
+		divisor /= 10;
 	}
 
-	if (n / 10)
-	{
-		putchar_int(n / 10, len);
-	}
-	len += _putchar((n % 10) + '0');
-	return (count);
+	return (len);
 }
