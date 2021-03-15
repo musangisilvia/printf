@@ -24,6 +24,8 @@ int get_print_func(char c, char b, va_list args, int len)
 			len += _putchar(c);
 			break;
 		case 'd':
+			len = print_num(args, len);
+			break;
 		case 'i':
 			len = print_num(args, len);
 			break;
