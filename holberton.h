@@ -13,6 +13,6 @@ int print_char(va_list, int);
 int print_str(va_list, int);
 int print_num(va_list, int);
 int putchar_int(int, int);
-int print_unsigned(va_list, int);
+int print_positive(va_list, int);
 int print_binary(int, int);
 #endif

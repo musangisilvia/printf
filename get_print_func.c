@@ -5,7 +5,7 @@
   * @c: The specifier or current character
   * @b: The previous character
   * @args: List of arguments
-  * @len: The current lenght of the string.
+  * @len: number of chars printed.
   *
   * Return: Pointer to correct print function
   */
@@ -29,7 +29,7 @@ int get_print_func(char c, char b, va_list args, int len)
 			len = print_num(args, len);
 			break;
 		case 'b':
-			len = print_unsigned(args, len);
+			len = print_positive(args, len);
 			break;
 		default:
 			len += _putchar(b);

@@ -4,7 +4,7 @@
   * _putchar - Prints a character
   * @c: Character to print
   *
-  * Return: Number of printed bytes
+  * Return: Number or bytes printed.
   */
 int _putchar(int c)
 {
@@ -38,7 +38,7 @@ int print_num(va_list args, int len)
   * @args: List of arguments
   * @len: Length of string so far
   *
-  * Return: The new length of the string
+  * Return: len
   */
 int print_char(va_list args, int len)
 {

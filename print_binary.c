@@ -19,14 +19,13 @@ int print_binary(int n, int len)
 }
 
 /**
-  * print_unsigned - Recursive function for printing binary format of number
-  * @args: The list of arguments
-  * @len: The current lenght of the string
+  *print_positive - check if argument is positive.
+  *@args: list of arguments.
+  *@len: number of chars printed.
   *
-  * Return: The new length of the string
+  *Return: len;
   */
-
-int print_unsigned(va_list args, int len)
+int print_positive(va_list args, int len)
 {
 	int n;
 
