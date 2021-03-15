@@ -80,7 +80,7 @@ int putchar_int(int n, int len)
 {
 	if (n < 0)
 	{
-		len += _putchar('-');
+		len += _putchar(45);
 		n = -n;
 	}
 
