@@ -59,7 +59,7 @@ int print_char(va_list args, int len)
 int print_str(va_list args, int len)
 {
 	char *str = va_arg(args, char *);
-	
+
 	if (str == NULL)
 		str = "(null)";
 	while (*str)
