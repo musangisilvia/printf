@@ -24,3 +24,5 @@ In this project, we'll create a program that closely simulates the printf functi
 #### *_print*
 > - Usage: ``` man ./_print ```.
 
+#### *_printf.c*
+> Contains the main printf functions.
