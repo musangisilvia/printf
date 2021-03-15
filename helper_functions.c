@@ -26,9 +26,13 @@ unsigned int find_length(unsigned int n, int base)
 {
 	unsigned int count;
 
-	for (count = 0; count > 0; count++)
+	count = 0;
+	while (n > 0)
 	{
 		n = n / base;
+		if (n == 0)
+			break;
+		count++;
 	}
 	return (count);
 }
