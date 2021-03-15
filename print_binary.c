@@ -8,6 +8,9 @@
   */
 int print_binary(int n, int len)
 {
+	if (n == 0)
+		len += _putchar('0');
+
 	if ((n / 2) != 0)
 	{
 		print_binary(n / 2, len);
@@ -29,8 +32,7 @@ int print_positive(va_list args, int len)
 {
 	int n;
 
-	n = va_arg(args, int);
-	if (n < 0)
-		n = -n;
+	n = va_arg(args, unsigned int);
+
 	return (print_binary(n, len));
 }
