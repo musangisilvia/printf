@@ -1,20 +1,6 @@
 #include "holberton.h"
 
 /**
-  * _putchar - Prints a character
-  * @c: Character to print
-  *
-  * Return: Number or bytes printed.
-  */
-int _putchar(int c)
-{
-	char a[1];
-
-	a[0] = (char)c;
-	return (write(1, a, 1));
-}
-
-/**
   * print_num - Prints number to std output
   * @args: List of arguments
   * @len: Length of string so far
