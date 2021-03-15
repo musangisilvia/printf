@@ -43,8 +43,8 @@ int print_num(va_list args, int len)
 int print_char(va_list args, int len)
 {
 	int c = va_arg(args, int);
-
-	len += _putchar(c);
+	if (c != 0)
+		len += _putchar(c);
 	return (len);
 }
 
@@ -60,10 +60,11 @@ int print_str(va_list args, int len)
 {
 	char *str = va_arg(args, char *);
 
-	if (str == NULL)
-		str = "(null)";
-	while (*str)
-		len += _putchar(*str++);
+	if (str != NULL)
+	{
+		while (*str)
+			len += _putchar(*str++);
+	}
 
 	return (len);
 }
