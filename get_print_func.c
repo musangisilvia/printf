@@ -21,7 +21,6 @@ int get_print_func(char c, char b, va_list args, int len)
 			len = print_str(args, len);
 			break;
 		case '%':
-			_putchar(c);
 			len += _putchar(c);
 			break;
 		case 'd':
