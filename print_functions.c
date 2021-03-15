@@ -79,18 +79,19 @@ int print_str(va_list args, int len)
 int putchar_int(int n, int len)
 {
 	int count, num;
-	
+
 	num = n;
 
 	count = 0;
 
 	if (n < 0)
 	{
-		len += _putchar(45);
+		count += _putchar(45);
 		n = -n;
+
 	}
 
-	/*test too count digits*/
+	/*test to count digits*/
 	while (num != 0)
 	{
 		num /= 10;
