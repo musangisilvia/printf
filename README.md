@@ -26,3 +26,13 @@ In this project, we'll create a program that closely simulates the printf functi
 
 #### *_printf.c*
 > Contains the main printf functions.
+
+#### *print_binary.c*
+> Function to print binary numbers where 'b' specifier is used.
+
+#### *get_print_func.c*
+> Function that calls the correct print function depending on the specifier
+
+#### *print_functions.c*
+> Contains print functions for different specifiers
+
