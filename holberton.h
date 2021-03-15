@@ -8,7 +8,7 @@
 int _putchar(int c);
 int _printf(const char *format, ...);
 
-int get_print_func(char, char, va_list, int); 
+int get_print_func(char, char, va_list, int);
 int print_char(va_list, int);
 int print_str(va_list, int);
 int print_num(va_list, int);
