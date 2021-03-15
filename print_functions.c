@@ -1,22 +1,6 @@
 #include "holberton.h"
 
 /**
-  * _putchar - Prints a character
-  * @c: Character to print
-  *
-  * Return: Number or bytes printed.
-  */
-int _putchar(int c)
-{
-	char a[1];
-
-	a[0] = (char)c;
-	return (write(1, a, 1));
-}
-
-
-
-/**
   * print_num - Prints number to std output
   * @args: List of arguments
   * @len: Length of string so far
@@ -26,7 +10,9 @@ int _putchar(int c)
 
 int print_num(va_list args, int len)
 {
-	int n  = va_arg(args, int);
+	int n;
+
+	n = va_arg(args, int);
 
 	len = putchar_int(n, len);
 	return (len);
@@ -59,7 +45,7 @@ int print_char(va_list args, int len)
 int print_str(va_list args, int len)
 {
 	char *str = va_arg(args, char *);
-	
+
 	if (str == NULL)
 		str = "(null)";
 	while (*str)
@@ -78,15 +64,25 @@ int print_str(va_list args, int len)
   */
 int putchar_int(int n, int len)
 {
+	int divisor, num;
+
+	divisor = 1;
 	if (n < 0)
 	{
-		len += _putchar('-');
-		n = -n;
+		len += _putchar(45);
+		num = -n;
+	}
+	else
+		num = n;
+	for (; num / divisor > 9; )
+		divisor *= 10;
+
+	for (; divisor != 0; )
+	{
+		len += _putchar((num / divisor) + '0');
+		num %= divisor;
+		divisor /= 10;
 	}
 
-	if (n / 10)
-		putchar_int(n / 10, len);
-
-	len += _putchar((n % 10) + '0');
 	return (len);
 }

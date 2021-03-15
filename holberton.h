@@ -15,4 +15,6 @@ int print_num(va_list, int);
 int putchar_int(int, int);
 int print_positive(va_list, int);
 int print_binary(int, int);
-#endif
+unsigned int find_length(unsigned int n, int base);
+
+#endif /* HOLBERTON_H */
