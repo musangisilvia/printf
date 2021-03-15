@@ -8,9 +8,6 @@
   */
 int print_binary(int n, int len)
 {
-	if (n == 0)
-		len += _putchar('0');
-
 	if ((n / 2) != 0)
 	{
 		print_binary(n / 2, len);
