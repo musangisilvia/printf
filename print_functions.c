@@ -4,11 +4,12 @@
   * _putchar - Prints a character
   * @c: Character to print
   *
-  * Return: Number of printed bytes
+  * Return: Number or bytes printed.
   */
 int _putchar(int c)
 {
 	char a[1];
+
 	a[0] = (char)c;
 
 	return (write(1, a, 1));
@@ -19,8 +20,9 @@ int _putchar(int c)
 /**
   * print_num - Prints number to std output
   * @args: List of arguments
+  * @len: number of chars printed.
   *
-  * Return: 0;
+  * Return: len.
   */
 
 int print_num(va_list args, int len)
@@ -35,8 +37,9 @@ int print_num(va_list args, int len)
 /**
   * print_char - Prints a char to std output
   * @args: List of arguments
+  * @len: number of chars printed.
   *
-  * Return: Not sure yet
+  * Return: len
   */
 int print_char(va_list args, int len)
 {
@@ -50,8 +53,9 @@ int print_char(va_list args, int len)
 /**
   * print_str - Prints a string to std output
   * @args: List of arguments
+  * @len: number of chars printed.
   *
-  * Return: Not sure yet
+  * Return: len
   */
 int print_str(va_list args, int len)
 {
@@ -69,7 +73,9 @@ int print_str(va_list args, int len)
 /**
   * putchar_int - prints integers
   * @n: Number
+  * @len: number of chars printed.
   *
+  * Return: len.
   */
 int putchar_int(int n, int len)
 {
