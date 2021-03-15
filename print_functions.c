@@ -28,9 +28,6 @@ int print_num(va_list args, int len)
 
 	n = va_arg(args, int);
 
-	if (!n)
-		return (len);
-
 	len = putchar_int(n, len);
 	return (len);
 }
