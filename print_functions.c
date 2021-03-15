@@ -78,15 +78,29 @@ int print_str(va_list args, int len)
   */
 int putchar_int(int n, int len)
 {
+	int count, num;
+	
+	num = n;
+
+	count = 0;
+
 	if (n < 0)
 	{
 		len += _putchar(45);
 		n = -n;
 	}
 
-	if (n / 10)
-		putchar_int(n / 10, len);
+	/*test too count digits*/
+	while (num != 0)
+	{
+		num /= 10;
+		++count;
+	}
 
+	if (n / 10)
+	{
+		putchar_int(n / 10, len);
+	}
 	len += _putchar((n % 10) + '0');
-	return (len);
+	return (count);
 }
