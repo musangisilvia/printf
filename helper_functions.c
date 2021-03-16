@@ -8,9 +8,9 @@
   */
 int print_positive(va_list args, int len)
 {
-	int n;
+	unsigned long int n;
 
-	n = va_arg(args, unsigned int);
+	n = va_arg(args, int);
 
 	return (print_binary(n, len));
 }

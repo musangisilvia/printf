@@ -6,7 +6,7 @@
   *
   * Return: length.
   */
-int print_binary(int n, int len)
+int print_binary(unsigned long int n, int len)
 {
 	/*count chars*/
 	if ((n / 2) != 0)
