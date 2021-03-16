@@ -69,7 +69,7 @@ int putchar_int(int n, int len)
 	if (n < 0)
 	{
 		len += prntchar(45);
-		num = -(unsigned)n;
+		num = -(unsigned int)n;
 	}
 	else
 	{
