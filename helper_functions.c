@@ -24,11 +24,14 @@ int print_positive(va_list args, int len)
   */
 unsigned int find_length(unsigned int n, int base)
 {
-	unsigned int count = 0;
+	unsigned int count;
 
-	while (n != 0)
+	count = 0;
+	while (n > 0)
 	{
 		n = n / base;
+		if (n == 0)
+			break;
 		count++;
 	}
 	return (count);
