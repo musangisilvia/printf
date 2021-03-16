@@ -15,7 +15,7 @@ int print_Str(va_list, int);
 int print_num(va_list, int);
 int putchar_int(int, int);
 int print_positive(va_list, int);
-int print_binary(unsigned long int, int);
+int print_binary(unsigned int, int);
 unsigned int find_length(unsigned int n, int base);
 int print_unsignd(va_list args, int len);
 int print_numbers(unsigned long n, unsigned int base, const char *digits);
