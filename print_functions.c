@@ -46,9 +46,7 @@ int print_str(va_list args, int len)
 {
 	const char *str = va_arg(args, const char *);
 
-	if (str == NULL)
-		str = "(null)";
-	while (*str)
+	while (str && *str)
 		len += _putchar(*str++);
 
 	return (len);
