@@ -16,5 +16,5 @@ int print_binary(int n, int len)
 
 	 _putchar((n % 2) + '0');
 	len += find_length(n, 2);
-	return (len);
+	return (len + 1);
 }
