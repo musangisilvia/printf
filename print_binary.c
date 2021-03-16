@@ -9,13 +9,12 @@
 int print_binary(int n, int len)
 {
 	/*count chars*/
-	len = find_length(n, 2);
 	if ((n / 2) != 0)
 	{
 		print_binary(n / 2, len);
 	}
 
-	_putchar((n % 2) + '0');
-
+	 _putchar((n % 2) + '0');
+	len += find_length(n, 2);
 	return (len);
 }
