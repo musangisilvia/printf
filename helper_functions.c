@@ -51,3 +51,21 @@ int _putchar(int c)
 
 	return (write(1, a, 1));
 }
+
+/**
+  * print_numbers - Prints numbers according to the specified base
+  * @n: Number to print
+  * @base: The base to print.
+  * @digits: The digits found in this base
+  *
+  * Return: The length
+  */
+
+int print_numbers(unsigned long n, unsigned int base, const char *digits)
+{
+
+	if (n >= base)
+		print_numbers((n / base), base, digits);
+	_putchar(digits[n % base]);
+	return (find_length(n, base));
+}
