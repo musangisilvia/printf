@@ -20,12 +20,13 @@ int get_print_func(char c, char b, va_list args, int len)
 		case 's':
 			len = print_str(args, len);
 			break;
+		case 'S':
+			len = print_Str(args, len);
+			break;
 		case '%':
 			len += _putchar(c);
 			break;
 		case 'd':
-			len = print_num(args, len);
-			break;
 		case 'i':
 			len = print_num(args, len);
 			break;
@@ -33,7 +34,7 @@ int get_print_func(char c, char b, va_list args, int len)
 			len = print_positive(args, len);
 			break;
 		case 'u':
-			len = print_unsigned(args, len);
+			len = print_unsignd(args, len);
 			break;
 		case 'o':
 			len = print_octal(args, len);
