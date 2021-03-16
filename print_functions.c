@@ -64,25 +64,18 @@ int print_str(va_list args, int len)
   */
 int putchar_int(int n, int len)
 {
-	int divisor, num;
+	unsigned long num;
 
-	divisor = 1;
 	if (n < 0)
 	{
 		len += _putchar(45);
-		num = -n;
+		num = -(unsigned)n;
 	}
 	else
-		num = n;
-	for (; num / divisor > 9; )
-		divisor *= 10;
-
-	for (; divisor != 0; )
 	{
-		len += _putchar((num / divisor) + '0');
-		num %= divisor;
-		divisor /= 10;
+		num = n;
 	}
+	len += print_numbers(num, 10, "0123456789");
 
 	return (len);
 }
