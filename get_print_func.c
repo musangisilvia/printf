@@ -32,6 +32,9 @@ int get_print_func(char c, char b, va_list args, int len)
 		case 'b':
 			len = print_positive(args, len);
 			break;
+		case 'u':
+			len = print_unsigned(args, len);
+			break;
 		default:
 			len += _putchar(b);
 			len += _putchar(c);
