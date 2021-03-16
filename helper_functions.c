@@ -67,5 +67,5 @@ int print_numbers(unsigned long n, unsigned int base, const char *digits)
 	if (n >= base)
 		print_numbers((n / base), base, digits);
 	_putchar(digits[n % base]);
-	return (find_length(n, base));
+	return (find_length(n, base) + 1);
 }
