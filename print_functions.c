@@ -44,7 +44,7 @@ int print_char(va_list args, int len)
   */
 int print_str(va_list args, int len)
 {
-	char *str = va_arg(args, char *);
+	const char *str = va_arg(args, const char *);
 
 	if (str == NULL)
 		str = "(null)";
