@@ -24,6 +24,8 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
+			if (format[i] == '\0')
+				return (len);
 			/*Function to check specifier and run correct print*/
 			len = get_print_func(format[i], format[i - 1], args, len);
 			i++;
