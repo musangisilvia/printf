@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == '\0')
-				return (len);
+				return (-1);
 			/*Function to check specifier and run correct print*/
 			len = get_print_func(format[i], format[i - 1], args, len);
 			i++;
