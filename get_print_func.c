@@ -45,6 +45,9 @@ int get_print_func(char c, char b, va_list args, int len)
 		case 'X':
 			len = print_heX(args, len);
 			break;
+		case 'R':
+			len = print_rot13(args, len);
+			break;
 		default:
 			len += prntchar(b);
 			len += prntchar(c);
