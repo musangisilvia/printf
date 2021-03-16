@@ -33,7 +33,7 @@ int get_print_func(char c, char b, va_list args, int len)
 			len = print_positive(args, len);
 			break;
 		case 'u':
-			len = print_unsigned(args, len);
+			len = print_u(args, len);
 			break;
 		case 'o':
 			len = print_octal(args, len);
