@@ -11,6 +11,7 @@ int _printf(const char *format, ...);
 int get_print_func(char, char, va_list, int);
 int print_char(va_list, int);
 int print_str(va_list, int);
+int print_Str(va_list, int);
 int print_num(va_list, int);
 int putchar_int(int, int);
 int print_positive(va_list, int);
