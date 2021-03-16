@@ -38,12 +38,12 @@ unsigned int find_length(unsigned int n, int base)
 }
 
 /**
-  *_putchar - prints a charaxcter
+  * prntchar - prints a charaxcter
   * @c: character to print.
   *
   * Return: number of bytes printed.
   */
-int _putchar(int c)
+int prntchar(int c)
 {
 	char a[1];
 
@@ -66,6 +66,6 @@ int print_numbers(unsigned long n, unsigned int base, const char *digits)
 
 	if (n >= base)
 		print_numbers((n / base), base, digits);
-	_putchar(digits[n % base]);
+	prntchar(digits[n % base]);
 	return (find_length(n, base) + 1);
 }

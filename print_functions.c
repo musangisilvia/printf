@@ -30,7 +30,7 @@ int print_char(va_list args, int len)
 {
 	int c = va_arg(args, int);
 
-	len += _putchar(c);
+	len += prntchar(c);
 	return (len);
 }
 
@@ -47,7 +47,7 @@ int print_str(va_list args, int len)
 	const char *str = va_arg(args, const char *);
 
 	while (str && *str)
-		len += _putchar(*str++);
+		len += prntchar(*str++);
 
 	return (len);
 }
@@ -66,7 +66,7 @@ int putchar_int(int n, int len)
 
 	if (n < 0)
 	{
-		len += _putchar(45);
+		len += prntchar(45);
 		num = -(unsigned)n;
 	}
 	else

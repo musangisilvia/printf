@@ -14,7 +14,7 @@ int print_binary(unsigned int n, int len)
 		print_binary(n / 2, len);
 	}
 
-	 _putchar((n % 2) + '0');
+	prntchar((n % 2) + '0');
 	len += find_length(n, 2);
 	return (len + 1);
 }

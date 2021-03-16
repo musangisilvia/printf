@@ -24,7 +24,7 @@ int get_print_func(char c, char b, va_list args, int len)
 			len = print_Str(args, len);
 			break;
 		case '%':
-			len += _putchar(c);
+			len += prntchar(c);
 			break;
 		case 'd':
 		case 'i':
@@ -46,8 +46,8 @@ int get_print_func(char c, char b, va_list args, int len)
 			len = print_heX(args, len);
 			break;
 		default:
-			len += _putchar(b);
-			len += _putchar(c);
+			len += prntchar(b);
+			len += prntchar(c);
 			break;
 	}
 	return (len);
