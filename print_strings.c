@@ -19,6 +19,8 @@ int print_Str(va_list args, int len)
 	i = 0;
 	while (str[i] != '\0')
 	{
+		len += _putchar(str[i]);
+
 		if ((str[i] > 0 && str[i] < 32) || str[i] >= 127)
 		{
 			if (str[i] < 15)
