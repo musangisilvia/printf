@@ -1,41 +1,50 @@
 #include "holberton.h"
-
 /**
-  * _printf - Printss to standard output the arguments passed to it
-  * @format: The format to be taken into account while printing
+  *_printf - prints formatted output.
+  *@format: input.
   *
-  * Return: Number of characters printed
+  *Return: number of chars printed or -1.
   */
-
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i = 0, len = 0;
+	int i, len;
+	int (*get_ptr)(va_list, int);
 
 	va_start(args, format);
-
-	if (!format)
+	if (!(format))
 		return (-1);
-
+	i = 0;
+	len = 0;
 	while (format && format[i])
 	{
-		if (format[i] != '%')
+		if (format[i] == '%')
 		{
-			len += prntchar(format[i]);
+			i++;
+			if (format[i] == '%')
+			{
+				len += _putchar(format[i]);
+				i++;
+				continue;
+			}
+			if (format[i] == '\0')
+				return (-1);
+			get_ptr = get_print_func(format[i]);
+			if (get_ptr != NULL)
+				len = get_ptr(args, len);
+			else
+			{
+				len += _putchar(format[i - 1]);
+				len += _putchar(format[i]);
+			}
 			i++;
 		}
 		else
 		{
-			i++;
-			if (format[i] == '\0')
-				return (-1);
-			/*Function to check specifier and run correct print*/
-			len = get_print_func(format[i], format[i - 1], args, len);
+			len += _putchar(format[i]);
 			i++;
 		}
 	}
-
 	va_end(args);
-
-	return (len); /*Supposed to be the length*/
+	return (len);
 }

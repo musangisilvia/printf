@@ -25,10 +25,10 @@ int print_rot13(va_list args, int len)
 		|| (str[i] >= 'a' && str[i] <= 'z'))
 		{
 			position = str[i] - 65;
-			len += prntchar(r1[position]);
+			len += _putchar(r1[position]);
 		}
 		else
-			len += prntchar(str[i]);
+			len += _putchar(str[i]);
 
 		i++;
 	}

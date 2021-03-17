@@ -3,25 +3,35 @@
 
 #include <stdarg.h>
 #include <stdlib.h>
-#include <unistd.h>
 
-int prntchar(int c);
+/**
+  *struct directives - holds fromat specifiers and their functions.
+  *@spec: char.
+  *@fspec: function pointer.
+  *
+  */
+typedef struct directives
+{
+	char spec;
+	int (*fspec)(va_list, int);
+} forms;
+
+int _putchar(char c);
 int _printf(const char *format, ...);
-
-int get_print_func(char, char, va_list, int);
-int print_char(va_list, int);
+int (*get_print_func(char c))(va_list, int);
+int print_ch(va_list, int);
 int print_str(va_list, int);
-int print_Str(va_list, int);
-int print_num(va_list, int);
-int putchar_int(int, int);
-int print_positive(va_list, int);
-int print_binary(unsigned int, int);
-unsigned int find_length(unsigned int n, int base);
-int print_unsignd(va_list args, int len);
+int print_int(va_list, int);
+int _putchar_int(int, int);
 int print_numbers(unsigned long n, unsigned int base, const char *digits);
-int print_octal(va_list args, int len);
+unsigned int find_length(unsigned int, int);
 int print_hex(va_list args, int len);
 int print_heX(va_list args, int len);
-int print_rot13(va_list, int);
+int print_unsignd(va_list args, int len);
+int print_octal(va_list args, int len);
+int print_rot13(va_list args, int len);
+int print_b(va_list args, int len);
+int print_binary(unsigned int, int);
+int print_Str(va_list args, int len);
 
-#endif /* HOLBERTON_H */
+#endif
