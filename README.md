@@ -12,17 +12,12 @@ In this project, we'll create a program that closely simulates the printf functi
 #### *holberton.h*
 > This is an include guarded file that contains function prototypes of the different functions used to make this program.
 
-### *FUNCTIONS*
-
-#### *_printf.c*
-#### *print_functions.c
-#### *print_binary.c*
-#### *get_print_func.c*
-
 ### *MAN PAGE*
 
-#### *_print*
-> - Usage: ``` man ./_print ```.
+#### *man_3_printf*
+> - Usage: ``` man ./man_3_printf ```.
+
+### *FUNCTIONS*
 
 #### *_printf.c*
 > Contains the main printf functions.
