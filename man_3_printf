@@ -67,12 +67,42 @@ a terminating null byte ('\\0');
 .RE
 .RE
 
+.PP
+.RS i
+.B b
+.RS
+An int argument is converted to binary.
+.RE
+.RE
+
+.PP
+.RS i
+.B S
+.RS
+.I const char *
+argument is expected to be an array of the characters is written. Non printable
+characters are written in two digit hexadecimal notation preceded by a '\\x'.
+.RE
+.RE
+
+.PP
+.RS i
+.B R
+.RS
+.I const char *
+argument is expected to be an array of characters to be written. The characters are
+printed in
+.B rot13
+encryption, upto ut not inlcuding the null byte.
+.RE
+.RE
+
 .SH EXIT STATUS
 .PP
-The program exits conventionally with a status of 0 when successful and 1 when theres an error.
+The program exits conventionally with a status of 0 when successful and -1 when theres an error.
 
 .SH BUGS
-The program can only correctly identify 4 format specifiers at the moment. Any other format specifier will cause unexpected behaviour.
+The program can only correctly identify 7 format specifiers at the moment. Any other format specifier will cause unexpected behaviour.
 
 .SH AUTHORS
 .PP
