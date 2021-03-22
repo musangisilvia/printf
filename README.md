@@ -32,19 +32,30 @@ In this project, we'll create a program that closely simulates the printf functi
 
 #### *print_chars.c*
 > Contains two functions handling format specifier ``` %s and %c ```.
+> * 1. print_ch() - A function that writes characters to stdout.
+> * 2. print_str() - Function that writes strings to stdout.
 > - Prototype:
 > - 1. ``` int print_ch(va_list args, int len); ```
 > - 2. ``` int print_str(va_list args, int len) ```.
-> - Return: number of characters written.
+> - Return:
+> * number of characters written.
 
 #### *print_numbers.c*
 > Contains four functions all handling format specifiers ``` %d and %i```.
+> * 1. print_int() - A function that checks for signed integers.
+> * 2. _putchar_int() - A fuunction that writes signed integers to stdout.
+> * 3. print_numbers() - A function that checks for numbers larger than INT_MAX.
+> * 4. find_length() - A function that counts the digits in a numer.
 > - Prototypes: 
 > * 1. ``` int print_int(va_list args, int len) ```
 > * 2. ``` int _putchar_int(int n, int len) ```
 > * 3. ``` int print_numbers(unsigned long n, unsigned int base, const char *digits) ```
 > * 4. ``` unsigned int find_length(unsigned int n, int base) ```.
-> - Return: number of digits written to stdout.
+> - Return:
+> * 1. An unsigned long integer and the current length of the number.
+> * 2. Length of number written to stdout.
+> * 3. A call to findlength.
+> * 4. Number of digits in a number.
 
 #### *print_binary.c*
 > Contains two functions handling the custom format specifier ``` %b ```.
@@ -59,7 +70,10 @@ In this project, we'll create a program that closely simulates the printf functi
 
 #### *print_hex.c*
 > Contains two functions handling the format specifiers ``` %x and %X ```.
+> * 1. print_hex() - A function that converts integer inputs to lowercase hexadecimal numbers.
+> * 2. print_heX() - A function that converts integer inputs to uppercase hexadecimal numbers.
 > - Prototype:
 > * 1. ``` int print_hex(va_list args, int len); ```.
 > * 2. ``` int print_heX(va_list args, int len); ```.
-> - Return: number of hexadecimal characters written.
+> - Return:
+> * number of hexadecimal characters written.
