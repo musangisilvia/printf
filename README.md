@@ -40,3 +40,10 @@ In this project, we'll create a program that closely simulates the printf functi
 #### *print_functions.c*
 > Contains print functions for different specifiers
 
+#### *print_binary.c*
+> Contains two functions.
+> - 1- print_binary() - A funtction that converts an int to binary
+> - 2- print_b() - Initializes the arg to an unsigned int and calls print_binary()
+> - Prototype: 1. ``` int print_binary(unsigned int, int); ```, 2. ``` int print_b(va_list args, int len);  ```.
+> - Return: 1. Length of printed binary 2. The value returned by print_binary  
+
