@@ -77,3 +77,20 @@ In this project, we'll create a program that closely simulates the printf functi
 > * 2. ``` int print_heX(va_list args, int len); ```.
 > - Return:
 > * number of hexadecimal characters written.
+
+#### *print_octal.c*
+> Contains a function that handles the format specifier ``` %o ```.
+> * 1. print_octal() - A function that coverts integer inputs to octal values.
+> - Prototype: 
+> * ``` int print_octal(va_list args, int len); ```.
+> - Return: 
+> * Number of cotal character written to stdout.
+
+#### *print_rot13.c*
+> Contains a function that handles the format specifier ``` %S ````.
+> * print_rot13() - A function that prints a string encrypted using [ROT13]{https://rot13.com/}.
+> - Prototype: 
+> * ``` int print_rot13(va_list args, int len) ```.
+> - Return:
+> * Number of characters written to stdout.
+
