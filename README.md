@@ -82,15 +82,15 @@ In this project, we'll create a program that closely simulates the printf functi
 > Contains a function that handles the format specifier ``` %o ```.
 > * 1. print_octal() - A function that coverts integer inputs to octal values.
 > - Prototype: 
-> * ``` int print_octal(va_list args, int len); ```.
+> * 1. ``` int print_octal(va_list args, int len); ```.
 > - Return: 
-> * Number of cotal character written to stdout.
+> * 1. Number of cotal character written to stdout.
 
 #### *print_rot13.c*
-> Contains a function that handles the format specifier ``` %S ````.
-> * print_rot13() - A function that prints a string encrypted using [ROT13]{https://rot13.com/}.
+> Contains a function that handles the format specifier ``` %S ```.
+> * 1. print_rot13() - A function that prints a string encrypted using [ROT13](https://rot13.com/).
 > - Prototype: 
-> * ``` int print_rot13(va_list args, int len) ```.
+> * 1. ``` int print_rot13(va_list args, int len) ```.
 > - Return:
-> * Number of characters written to stdout.
+> * 1. Number of characters written to stdout.
 
