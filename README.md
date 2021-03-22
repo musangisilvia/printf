@@ -87,10 +87,17 @@ In this project, we'll create a program that closely simulates the printf functi
 > * 1. Number of cotal character written to stdout.
 
 #### *print_rot13.c*
-> Contains a function that handles the format specifier ``` %S ```.
+> Contains a function that handles the format specifier ``` %R ```.
 > * 1. print_rot13() - A function that prints a string encrypted using [ROT13](https://rot13.com/).
 > - Prototype: 
-> * 1. ``` int print_rot13(va_list args, int len) ```.
+> * 1. ``` int print_rot13(va_list args, int len); ```.
 > - Return:
 > * 1. Number of characters written to stdout.
 
+#### *print_strings*
+> Contains a function that handles the format specifier ``` %S ```.
+> 1. print_Str() - prints the unprintable characters in their hexadecimal equivalent preceded with ``` \x0 ``` for on digit characters and ``` \x ``` for charcters with more than one digit.
+> - Prototype:
+> 1. ``` int print_Str(va_list args, int len); ```.
+> - Return:
+> 1. Number of characters written to stdout.
