@@ -34,8 +34,7 @@ In this project, we'll create a program that closely simulates the printf functi
 > Contains two functions.
 > - 1- A function that writes characters to stdout.
 > - 2- A function that writes strings to stdout.
-> - Prototype: 1. ``` int print_ch(va_list args, int len); ```.
-> -	       2. ``` int print_str(va_list args, int len) ```.
+> - Prototype: 1. ``` int print_ch(va_list args, int len); ```, 2. ``` int print_str(va_list args, int len) ```.
 > - Return: number of characters written.
 
 #### *print_functions.c*
