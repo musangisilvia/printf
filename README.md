@@ -31,12 +31,20 @@ In this project, we'll create a program that closely simulates the printf functi
 > - If format specifier doe not exist, it returns NULL. Otherwise, it returns a function pointer.
 
 #### *print_chars.c*
-> Contains two functions.
+> Contains two functions handling format specifier ``` %s and %c ```.
 > - 1- A function that writes characters to stdout.
 > - 2- A function that writes strings to stdout.
 > - Prototype: 1. ``` int print_ch(va_list args, int len); ```, 2. ``` int print_str(va_list args, int len) ```.
 > - Return: number of characters written.
 
-#### *print_functions.c*
-> Contains print functions for different specifiers
+#### *print_numbers.c*
+> Contains four functions all handling format specifiers ``` %d and %i```.
+> - 1- A function that prints an integer to standard output.
+> - 2- A function that finds the length of an integer.
+> - Prototypes: 
+> * ``` 1- int print_int(va_list args, int len) ```
+> * ``` 2- int _putchar_int(int n, int len) ```
+> * ``` 3- int print_numbers(unsigned long n, unsigned int base, const char *digits) ```
+> * ``` 4- unsigned int find_length(unsigned int n, int base) ```.
+> - Return: number of digits written to stdout.
 
