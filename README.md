@@ -48,10 +48,14 @@ In this project, we'll create a program that closely simulates the printf functi
 
 #### *print_binary.c*
 > Contains two functions handling the custom format specifier ``` %b ```.
+> * 1. print_binary() - A funtction that converts an int to binary.
+> * 2. print_b() - Initializes the arg to an unsigned int and calls print_binary().
 > - Prototype:
 > * 1. ``` int print_b(va_list args, int len); ```.
 > * 2. ``` int print_binary(unsigned int n, int len); ```.
-> - Return: number of binary characters written.
+> - Return:
+> * 1. Length of printed binary.
+> * 2. The value returned by print_binary
 
 #### *print_hex.c*
 > Contains two functions handling the format specifiers ``` %x and %X ```.
