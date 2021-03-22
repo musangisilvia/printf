@@ -20,13 +20,23 @@ In this project, we'll create a program that closely simulates the printf functi
 ### *FUNCTIONS*
 
 #### *_printf.c*
-> Contains the main printf functions.
-
-#### *print_binary.c*
-> Function to print binary numbers where 'b' specifier is used.
+> Contains the _printf function.
+> - Prototype: ``` int _printf(const char *format , ...); ```.
+> - Returns the number of characters written to string.
+> - Returns -1 on failure.
 
 #### *get_print_func.c*
-> Function that calls the correct print function depending on the specifier
+> a function that returns a pointer to a function based on the format specifier.
+> - Prototype: ``` int (*get_print_func(char c))(va_list, int); ```.
+> - If format specifier doe not exist, it returns NULL. Otherwise, it returns a function pointer.
+
+#### *print_chars.c*
+> Contains two functions.
+> - 1- A function that writes characters to stdout.
+> - 2- A function that writes strings to stdout.
+> - Prototype: 1. ``` int print_ch(va_list args, int len); ```.
+> -	       2. ``` int print_str(va_list args, int len) ```.
+> - Return: number of characters written.
 
 #### *print_functions.c*
 > Contains print functions for different specifiers
